@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel = "icon" href = "https://img.icons8.com/color/344/partly-cloudy-day--v1.png">
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header> <i class="bx bx-left-arrow-alt"></i> Weather App </header>
+      <section class="input-txt">
+        <p class="para "></p>
+        <input type="text" placeholder="Enter City Name" spellcheck="false" required>
+        <div class="separator"></div>
+        <button type="button" name="button">Use Current Location</button>
+      </section>
+
+      <section class="weather-sec">
+        <img src="#" alt="weather-icon">
+        <div class="tmp">
+          <span class="num">_</span>
+          <span class="deg">°</span>C
+        </div>
+        <div class="weath">_ _</div>
+        <div class="location">
+          <i class='bx bx-map'></i>
+          <span>_, _</span>
+        </div>
+        <div class="btm-details">
+          <div class="col feel">
+            <i class='bx bxs-thermometer'></i>
+            <div class="details">
+              <div class="tmp">
+                <span class="nums">_</span>
+                <span class="deg">°</span>C
+              </div>
+              <p>Real feel</p>
+            </div>
+          </div>
+
+          <div class="col humidity">
+            <i class='bx bxs-droplet-half'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

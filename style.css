@@ -1,0 +1,209 @@
+/* imported API's  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('https://cdn.pixabay.com/photo/2018/05/31/13/13/rainy-day-3443977_960_720.jpg'); /* #2f4f4f -- 2A293E -- 282D3C */
+}
+
+.wrap{
+  background: #fff;
+  width: 400px;
+  border-radius: 6px;
+}
+
+.wrap header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #008080;
+  display: flex;
+  align-items: center;
+  padding: 16px 15px;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+header i{
+  cursor: pointer;
+  font-size: 0px;
+  margin-right: 10px;
+}
+
+.wrap.active header i{
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.wrap .input-txt{
+  margin: 20px 25px 30px;
+}
+
+.input-txt :where(input,button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-radius: 7px;
+}
+
+
+.wrap.active .input-txt{
+  display: none;
+}
+
+.input-txt input{
+  text-align: center;
+  border: 1px solid #bfbfbf;
+}
+
+.input-txt .separator{
+  margin: 24px 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator::before{
+  content: "or";
+  padding: 0 15px;
+  background: #fff;
+  color: #bfbfbf;
+  font-size: 20px;
+}
+
+.input-txt button{
+  color: #fff;
+  cursor: pointer;
+  background: #008080;
+}
+
+.input-txt .para{
+  display: none;
+  font-size: 17px;
+  border-radius: 7px;
+  text-align: center;
+  padding: 13px 12px;
+  margin-bottom: 15px;
+}
+
+.input-txt input:is(:focus,:valid){
+  border: 2px solid #008080;
+}
+
+.para.error{
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.para.pending{
+  display: block;
+  color: #0c5460;
+ background: #d1ecf1;
+ border: 1px solid #bee5eb;
+}
+
+/* Weather Section Styling  */
+
+.wrap .weather-sec{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 0;
+  flex-direction: column;
+}
+
+.wrap.active .weather-sec{
+  display: flex;
+}
+
+.weather-sec .tmp{
+  display: flex;
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.weather-sec .tmp .num{
+  font-weight: 600;
+}
+
+.weather-sec .weath{
+  font-size: 20px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+.weather-sec .tmp .deg{
+  font-size: 45px;
+  margin: 5px 7px 0 0;
+  display: block;
+}
+
+.weather-sec .location{
+  font-size: 20px;
+  margin-bottom: 30px;
+  align-items:center;
+  display: flex;
+  justify-content: center;
+}
+
+.location i{
+  font-size: 22px;
+  margin-right: 6px;
+}
+
+.weather-sec .btm-details{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #bfbfbf;
+}
+
+.btm-details .col{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.col i{
+  color: #0c5460;
+  font-size: 40px;
+}
+
+.col.humidity{
+  border-left: 1px solid #bfbfbf;
+}
+
+.details .tmp, .humidity span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.details .tmp .deg{
+  font-size: 17px;
+  padding: 0 2px;
+  margin: 0;
+}
+
+.details p{
+  font-size: 14px;
+  margin-top: -5px;
+}
