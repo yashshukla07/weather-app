@@ -41,7 +41,7 @@ function onError(error){
 
 
 function requestApi(city){
-  const apiKey = "dc98ee6acfed9664c05c54c84539b567";
+  const apiKey = "d1afd07dc1364bbcfbc40ec0fc9ac6e1";
   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   fetchData();
 }
