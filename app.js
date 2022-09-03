@@ -29,7 +29,7 @@ locateBtn.addEventListener("click", ()=>{
 
 function onSuccess(point){
   const {latitude,longitude} = point.coords; // we'll get lat & long of device
-  const apiKey = "dc98ee6acfed9664c05c54c84539b567";
+  const apiKey = "d1afd07dc1364bbcfbc40ec0fc9ac6e1";
   api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
   fetchData();
 }
